@@ -28,8 +28,7 @@ class Category extends Model
             $category = $parent;
         }
 
-        rsort($tree);
-        return $tree;
+        return array_reverse($tree);
     }
 
     public static function getCategories($parent = '')
